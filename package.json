@@ -1,0 +1,18 @@
+{
+  "name": "boolean-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently --raw \"tsc --watch --preserveWatchOutput\" \"wds --watch\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Murilo Cruz",
+  "license": "ISC",
+  "devDependencies": {
+    "@web/dev-server": "^0.2.2",
+    "concurrently": "^8.2.0",
+    "typescript": "^5.1.3"
+  }
+}

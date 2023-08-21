@@ -1,0 +1,92 @@
+:root {
+  --font: "Fira Mono","Consolas", "Courier", "Lucida", monospace;
+  --bgcolor: darkslategray;
+  --fgcolor: floralwhite;
+  --success: limegreen;
+  --fail: crimson;
+  --outline: var(--fgcolor) solid 0.125rem;
+  --border: 0.125rem solid var(--fgcolor);
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--bgcolor);
+    color: var(--fgcolor);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    
+    width: 100%;
+    max-width: 1024px;
+    min-width: 480px;
+    padding: 1rem;
+}
+
+input {
+    width: 100ch;
+    max-width: 100%;
+    height: 2rem;
+    font-size: 1rem;
+    background: none;
+    color: var(--fgcolor);
+    font-family: var(--font);
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+input:focus {
+    outline: var(--outline);
+}
+
+.buttonSet {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button {
+    background: none;
+    color: var(--fgcolor);
+    font-family: var(--font);
+    border: var(--border);
+    border-radius: 0.5rem;
+    height: 2rem;
+    cursor: pointer;
+
+}
+button:focus-visible {
+    outline: var(--outline);
+}
+
+button[data-value=true] {
+    background: var(--success);
+}
+
+button[data-value=false] {
+    background: var(--fail);
+}
+
+.answer {
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+    border: var(--border);
+    
+    width: fit-content;
+}
+
+.answer.true {
+    background: var(--success);
+}
+
+.answer.false {
+    background: var(--fail);
+}
